@@ -4,10 +4,10 @@ import socket
 # Consigne 1 : Ajoutez les informations suivantes
 # LISTEN_ADDRESS est l'adresse de l'interface qui écoute des paquets, et LISTEN_PORT et le port associé avec lui
 # CONNECT_ADDRESS est l'adresse du destinataire, et CONNECT_PORT est le port destinataire
-LISTEN_ADDRESS    = _
-LISTEN_PORT       = _
-CONNECT_ADDRESS   = _
-CONNECT_PORT      = _
+LISTEN_ADDRESS    = "192.168.7.1"
+LISTEN_PORT       = 13500
+CONNECT_ADDRESS   = "132.207.46.34"
+CONNECT_PORT      = 54654
 
 
 def forward(listenaddress, listenport, connectaddress, connectport):
@@ -28,3 +28,4 @@ def forward(listenaddress, listenport, connectaddress, connectport):
 if __name__ == "__main__":
 
     forward(LISTEN_ADDRESS, LISTEN_PORT, CONNECT_ADDRESS, CONNECT_PORT)
+
