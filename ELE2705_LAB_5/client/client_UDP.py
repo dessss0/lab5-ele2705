@@ -28,7 +28,7 @@ PORT = config["port"]  # Le port utilisé par le serveur
 initialize_board(config)
 
 # Consigne 2 : Ouvrez un socket UDP
-s = _
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 with s:
     while True:
@@ -41,17 +41,18 @@ with s:
 
         # Consigne 3 : La variable data contient les données à envoyer. Envoyer ces données au serveur en utilisant la fonction sendto().
         # N'oubliez pas d'utiliser la fonction encode() pour envoyer les données en format binaire.
-        _
+        s.sendto(data.encode(), (HOST, PORT))
 
         # Print server echo reply
         # Consigne 4 : recevez la réponse du serveur avec la fonction recvfrom(). Recevez 1024 bytes dans la fonction.
         # Indice : La fonction recvfrom() retourne deux valeurs : les données reçues et l'adresse IP + port de la source.
-        reply = _
+        reply, addr = s.recvfrom(1024)
 
         # Consigne 5 : Assurez vous que la source de la réponse est celle du serveur
-        _
+        if adrr[0] == HOST and addr[1] == PORT:
+
              
         # Cette commande est pour afficher la réponse et pour allumer la LED
-        echo_reply(reply, config)
+            echo_reply(reply, config)
 
 print("Connection terminated.")

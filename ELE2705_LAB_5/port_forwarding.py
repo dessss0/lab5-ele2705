@@ -6,7 +6,7 @@ import socket
 # CONNECT_ADDRESS est l'adresse du destinataire, et CONNECT_PORT est le port destinataire
 LISTEN_ADDRESS    = "192.168.7.1"
 LISTEN_PORT       = 13500
-CONNECT_ADDRESS   = "132.207.46.34"
+CONNECT_ADDRESS   = "132.207.47.34"
 CONNECT_PORT      = 54654
 
 
